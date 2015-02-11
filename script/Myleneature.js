@@ -1,3 +1,5 @@
+$(document).ready(function()
+{
 (function(){
 $("body").append('<div id=\'MyleneatureWrap\'></div>');	
 $("#MyleneatureWrap").append('<div id=\'MyleneatureBlock\'></div>');	
@@ -56,3 +58,4 @@ $("#MyleneatureWrap").click(function(){
 hider();
 });
 })();
+});
