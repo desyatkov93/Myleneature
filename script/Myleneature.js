@@ -39,7 +39,7 @@ function activeWrap()
 	$("#MyleneatureBlock").css('display','block');
 	$(".MyleneatureImg").css('display','block');
 }
-
+// delegation in the all images
 $("img").click(function()
 {
 	if($(this).attr('myleneature') == '')
@@ -54,8 +54,21 @@ $("img").click(function()
 	}
 }
 );
+// hide Myleneature 
 $("#MyleneatureWrap").click(function(){
 hider();
 });
+
+// Stop bubbling
+$(".MyleneatureImg")[0].onclick = function(event) {
+  event = event || window.event; 
+  if (event.stopPropagation) {
+    event.stopPropagation();
+  } else {
+    event.cancelBubble = true;
+  }
+}
+
+
 })();
 });
